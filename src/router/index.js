@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Introduction from '@/components/Introduction'
 import Binding from '@/components/Binding'
+import EventHandling from '@/components/EventHandling'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/binding',
       name: 'Binding',
       component: Binding
+    },
+    {
+      path: '/event-handling',
+      name: 'EventHandling',
+      component: EventHandling
     }
   ]
 })
