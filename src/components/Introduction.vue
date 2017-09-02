@@ -30,7 +30,9 @@
 <script>
 export default {
   name: 'Introduction',
-
+  beforeCreate: function () {
+    console.log('Introduction beore creation')
+  },
   data () {
     return {
       message: 'Hello, world!',

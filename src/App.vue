@@ -8,7 +8,10 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  created: function () {
+    console.log('App created')
+  }
 }
 </script>
 
