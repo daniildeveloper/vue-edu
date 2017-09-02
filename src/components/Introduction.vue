@@ -19,7 +19,10 @@
     </div>
     <hr>
 
-    
+    <div class="message-with-input">
+      <p>{{message}}</p>
+      <input v-model="message" >
+    </div>
   </div>
 </template>
 
