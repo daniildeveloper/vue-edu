@@ -1,6 +1,9 @@
 <template>
   <div id="message">
-    {{message}}
+    <span class="message" v-once>
+      {{message}}
+    </span>
+    <span class="cap">{{message | capitalize}}</span>
     <hr>
 
 
@@ -35,7 +38,7 @@ export default {
   },
   data () {
     return {
-      message: 'Hello, world!',
+      message: 'sHello, world!',
       seen: true,
       todos: [
         {
@@ -54,6 +57,16 @@ export default {
   methods: {
     reverseMessage: function () {
       this.message = this.message.split('').reverse().join('')
+    }
+  },
+
+  filters: {
+    capitalize: function (value) {
+      if (!value) {
+        return ' '
+      }
+      value = value.toString()
+      return value.charAt(0).toUpperCase() + value.slice(1)
     }
   }
 }
