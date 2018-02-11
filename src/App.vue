@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <!-- <img src="./assets/logo.png"> -->
+    <!-- <router-view></router-view> -->
+    <board-example></board-example>
     
   </div>
 </template>
 
 <script>
+import BoardExample from './components/BoardExample'
+
 export default {
   name: 'app',
-  created: function () {
-    console.log('App created')
+
+  components: {
+    'board-example': BoardExample
   }
 }
 </script>
