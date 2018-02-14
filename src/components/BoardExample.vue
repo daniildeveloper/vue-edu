@@ -20,7 +20,7 @@ export default {
   methods: {
     updateBlock (id, status) {
       this.blocks.find(b => b.id === Number(id)).status = status
-      console.log(id + ' ' + status)
+      console.log(id + ' ' + status + '...')
     }
   }
 }
