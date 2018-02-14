@@ -1,10 +1,14 @@
 <template>
-  <kanban-board :stages="stages" @update-block="updateBlock" :blocks="blocks"></kanban-board>
+  <kanban-board-view :objectStages="objectStages" :stages="stages" @update-block="updateBlock" :blocks="blocks"></kanban-board-view>
 </template>
 
 <script>
+import VueKanban from './VueKanban'
 export default {
   name: 'BoardExample',
+  components: {
+    'kanban-board-view': VueKanban
+  },
   data () {
     return {
       stages: ['on-hold', 'in-progress', 'needs-review', 'approved'],
@@ -13,6 +17,16 @@ export default {
           id: 1,
           status: 'on-hold',
           title: 'Test'
+        }
+      ],
+      objectStages: [
+        {
+          id: 1,
+          name: 'on-hold'
+        },
+        {
+          id: 2,
+          name: 'in-progress'
         }
       ]
     }
